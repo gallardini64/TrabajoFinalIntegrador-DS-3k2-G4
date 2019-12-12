@@ -13,8 +13,15 @@ import java.util.ArrayList;
  */
 public class Freezer {
     private ArrayList<Bebida> bebidas; 
-    private ArrayList<Lote> lotes; 
+    private ArrayList<Bandeja> bandejas; 
 
+    public Freezer() {
+    this.bandejas = new ArrayList<>();
+    this.bebidas = new ArrayList<>();
+    }
+    
+    
+    
     public ArrayList<Bebida> getBebidas() {
         return bebidas;
     }
@@ -23,12 +30,12 @@ public class Freezer {
         this.bebidas = bebidas;
     }
 
-    public ArrayList<Lote> getLotes() {
-        return lotes;
+    public ArrayList<Bandeja> getBandejas() {
+        return bandejas;
     }
 
-    public void setLotes(ArrayList<Lote> lotes) {
-        this.lotes = lotes;
+    public void setLotes(ArrayList<Bandeja> lotes) {
+        this.bandejas = lotes;
     }
     
     public int cantidadBebidas(){
@@ -37,6 +44,8 @@ public class Freezer {
         return cantidad;
     }
     
-    
+    public void agregarBandeja(Bandeja bandeja){
+        this.bandejas.add(bandeja);
+    }
     
 }

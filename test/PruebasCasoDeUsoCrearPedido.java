@@ -18,6 +18,10 @@ import yurema.*;
  */
 public class PruebasCasoDeUsoCrearPedido {
     private static LineaPedido lp,lp2;
+    private static Sucursal su1;
+    private static Freezer freezer1,freezer2,freezer3;
+    private static Empanada empanadaPollo,empanadaCarne;
+    private static Bandeja bandeja1,bandeja2,bandeja3;
     
     
     public PruebasCasoDeUsoCrearPedido() {
@@ -34,6 +38,33 @@ public class PruebasCasoDeUsoCrearPedido {
         
         lp2 = new LineaPedido();
         
+        //----------------------
+        
+        su1 = new Sucursal();
+        
+        empanadaPollo = new Empanada();
+        empanadaPollo.setRelleno("pollo");
+        empanadaCarne = new Empanada();
+        empanadaCarne.setRelleno("carne");
+        
+        freezer1 = new Freezer();
+        freezer2 = new Freezer();
+        freezer3 = new Freezer();
+        
+        bandeja1 = new Bandeja();
+        bandeja2 = new Bandeja();
+        bandeja3 = new Bandeja();
+        
+        bandeja1.setEmpanada(empanadaCarne);
+        bandeja1.setCapacidadOcupada(30);
+        bandeja2.setEmpanada(empanadaPollo);
+        bandeja2.setCapacidadOcupada(30);
+        bandeja3.setEmpanada(empanadaCarne);
+        bandeja3.setCapacidadOcupada(30);
+
+        freezer1.agregarBandeja(bandeja1);
+        freezer2.agregarBandeja(bandeja2);
+        freezer3.agregarBandeja(bandeja3);
     }
     
     @AfterClass
@@ -100,5 +131,36 @@ public class PruebasCasoDeUsoCrearPedido {
         double precioSinDescuento = lp.getSubtotal();
         //validacion
          assertEquals(120, precioSinDescuento,0.0);
+     }
+     
+     @Test
+     public void prueba(){
+        //configuracion
+        
+        
+        //ejecucion
+        String relleno = bandeja1.getEmpanada().getRelleno();
+        //validacion
+
+        assertEquals("carne",relleno);
+     }
+     
+     
+     @Test
+     public void probarQueElConteoDelStockEsCorrecto(){
+        //configuracion
+
+        su1.agregarFreezer(freezer1);
+        su1.agregarFreezer(freezer2);
+        su1.agregarFreezer(freezer3);
+
+        //ejecucion
+        int stock = su1.obtenerStock("carne");
+        
+        
+        //validacion
+         assertEquals(60, stock,0.0);
+         assertEquals(3, su1.getFreezers().size(),0.0);
+         
      }
 }

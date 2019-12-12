@@ -11,19 +11,22 @@ import java.util.ArrayList;
  *
  * @author luciano
  */
-public class Local extends Pedido{
+public class ConsumoPersonal extends Pedido{
+    private String descripcion;
 
-    public Local() {
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     @Override
-    public void descontarStock(ArrayList<Bandeja> bandejas, ArrayList<Object> cantidades) {
+    public void descontarStock(ArrayList<Bandeja> bandejas,int[] cantidades) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-   
-    
-
     
     
 }

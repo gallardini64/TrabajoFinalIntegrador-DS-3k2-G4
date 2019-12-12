@@ -5,6 +5,8 @@
  */
 package yurema;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author luciano
@@ -17,7 +19,9 @@ public abstract class Pedido {
     public int getNumero() {
         return numero;
     }
-
+    
+    abstract public void descontarStock(ArrayList<Bandeja> bandejas,int[] cantidades);
+    
     public void setNumero(int numero) {
         this.numero = numero;
     }

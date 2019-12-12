@@ -11,12 +11,21 @@ import java.util.Date;
  *
  * @author luciano
  */
-public class Lote {
-    private Empanada emp;
+public class Bandeja {
+    private Empanada empanada;
     private int capacidadOcupada;
     private int numero;
+    private int numeroLote;
     private Date fechaProduccion;
     private static final int capacidad = 100;
+
+    public int getNumeroLote() {
+        return numeroLote;
+    }
+
+    public void setNumeroLote(int numeroLote) {
+        this.numeroLote = numeroLote;
+    }
 
     
     
@@ -29,12 +38,12 @@ public class Lote {
         this.capacidadOcupada = capacidadOcupada;
     }
     
-    public Empanada getEmp() {
-        return emp;
+    public Empanada getEmpanada() {
+        return empanada;
     }
 
-    public void setEmp(Empanada emp) {
-        this.emp = emp;
+    public void setEmpanada(Empanada emp) {
+        this.empanada = emp;
     }
 
     public int getNumero() {

@@ -5,6 +5,8 @@
  */
 package yurema;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author luciano
@@ -13,7 +15,8 @@ public class Delivery extends Pedido{
     private String nombreFamilia;
     private String direccionEntrega;
     private boolean enCamino;
-
+    
+    
     public Delivery(String nombreFamilia, String direccionEntrega) {
         this.nombreFamilia = nombreFamilia;
         this.direccionEntrega = direccionEntrega;
@@ -46,7 +49,14 @@ public class Delivery extends Pedido{
     public void setEnCamino(boolean enCamino) {
         this.enCamino = enCamino;
     }
-    
+
+    @Override
+    public void descontarStock(ArrayList<Bandeja> bandejas,int[] cantidades) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+        
     
     
 }
