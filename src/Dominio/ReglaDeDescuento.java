@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yurema;
+package Dominio;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,7 +28,7 @@ public class ReglaDeDescuento {
         
         double subTotalConDescuento = lp.getCantidad() * lp.getProducto().getPrecioUnitario();
         
-        if((lp.getProducto())instanceof Bebida)return subTotalConDescuento;
+        if((lp.getProducto())instanceof Bebida)return lp.getProducto().getPrecioUnitario() * lp.getCantidad();
         
         while(cantidadNueva >= 12){
             subTotalConDescuento = subTotalConDescuento - (lp.getProducto().getPrecioUnitario() * 3);

@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yurema;
+package Dominio;
 
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Bandeja {
     private int numero;
     private int numeroLote;
     private Date fechaProduccion;
-    private static final int capacidad = 100;
+    private static final int capacidad = 200;
 
     public int getNumeroLote() {
         return numeroLote;
@@ -35,7 +36,9 @@ public class Bandeja {
     }
 
     public void setCapacidadOcupada(int capacidadOcupada) {
-        this.capacidadOcupada = capacidadOcupada;
+        if(capacidadOcupada <= capacidad)this.capacidadOcupada = capacidadOcupada;
+        else JOptionPane.showMessageDialog(null, "no puede superar la capacidad maxima");
+        
     }
     
     public Empanada getEmpanada() {

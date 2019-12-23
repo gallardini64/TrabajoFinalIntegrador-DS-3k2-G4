@@ -3,18 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/LineaPedido.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Bandeja.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Estado.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Bebida.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Sucursal.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Area.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/Dominio/Freezer.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/controlador/ControladorCrearPedido.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/Dominio/LineaPedido.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/principal/Yurema.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/Dominio/Pedido.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/vista/CrearPedidos.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/vista/AgregarUbicacion.java</file>
             <file>file:/home/luciano/NetBeansProjects/yurema/test/PruebasCasoDeUsoCrearPedido.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/ReglaDeDescuento.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Freezer.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Local.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Delivery.java</file>
-            <file>file:/home/luciano/NetBeansProjects/yurema/src/yurema/Empanada.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/Dominio/ReglaDeDescuento.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/Dominio/Sucursal.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/datos/Repositorio.java</file>
+            <file>file:/home/luciano/NetBeansProjects/yurema/src/Dominio/ReglaDeDescarte.java</file>
         </group>
     </open-files>
 </project-private>

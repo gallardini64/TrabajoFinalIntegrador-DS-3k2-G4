@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yurema;
+package Dominio;
 
 /**
  *
@@ -13,8 +13,10 @@ public class LineaPedido {
     private Producto producto;
     private double subtotal;
     private int cantidad;
-
+    private ReglaDeDescuento regla;
+    
     public LineaPedido() {
+        this.regla = ReglaDeDescuento.getInstance();
     }
 
     public Producto getProducto() {
@@ -32,6 +34,11 @@ public class LineaPedido {
     public double getSubtotal() {
         return subtotal;
     }
+    
+    public void calcularSubTotal(){
+        this.subtotal = regla.aplicarDescuento(this);
+        
+    }
 
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
@@ -48,5 +55,7 @@ public class LineaPedido {
     public void aplicarDescuento (LineaPedido lp){
         lp.setSubtotal(ReglaDeDescuento.getInstance().aplicarDescuento(lp));
     }
+
+    
     
 }

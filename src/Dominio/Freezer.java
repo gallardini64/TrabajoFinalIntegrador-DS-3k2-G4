@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yurema;
+package Dominio;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,16 @@ import java.util.ArrayList;
  */
 public class Freezer {
     private ArrayList<Bebida> bebidas; 
-    private ArrayList<Bandeja> bandejas; 
+    private ArrayList<Bandeja> bandejas;
+    private int numero;
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 
     public Freezer() {
     this.bandejas = new ArrayList<>();
@@ -34,7 +43,7 @@ public class Freezer {
         return bandejas;
     }
 
-    public void setLotes(ArrayList<Bandeja> lotes) {
+    public void setBandejas(ArrayList<Bandeja> lotes) {
         this.bandejas = lotes;
     }
     
@@ -46,6 +55,14 @@ public class Freezer {
     
     public void agregarBandeja(Bandeja bandeja){
         this.bandejas.add(bandeja);
+    }
+
+    public void agregarBebida(Bebida bebida) {
+        this.bebidas.add(bebida);
+    }
+
+    void removerBebida(int i) {
+        bebidas.remove(i);
     }
     
 }

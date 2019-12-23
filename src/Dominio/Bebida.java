@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package yurema;
+package Dominio;
 
 /**
  *
@@ -19,6 +19,10 @@ public class Bebida extends Producto{
         super();
         this.volumen = volumen;
         this.nombre = nombre;
+    }
+
+    public Bebida() {
+        
     }
 
     
