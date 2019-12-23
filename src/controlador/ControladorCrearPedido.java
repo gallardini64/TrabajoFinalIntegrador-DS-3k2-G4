@@ -293,6 +293,7 @@ public class ControladorCrearPedido implements ActionListener{
                     }
                 }
                 sucursal.descontarStockEmpanadas(bandejas, pedido);
+                pedido.setEstado(Estado.PENDIENTE);
                 JOptionPane.showMessageDialog(null, "el stock despues es "+sucursal.obtenerStockTotal());
                 JOptionPane.showMessageDialog(null, "el stock de bebidas despues es "+sucursal.obtenerStockBebidas());
                 JOptionPane.showMessageDialog(null, "pedido de tipo "+pedido.getClass().getSimpleName());
